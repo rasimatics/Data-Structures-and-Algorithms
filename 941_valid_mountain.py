@@ -15,10 +15,10 @@ class Solution:
                         last_number = arr[i]
                         continue
                     elif arr[i] == last_number or i == 1:
-                            return False
-
-                    decreased_started = True
-                    last_number = arr[i]
+                        return False
+                    else:
+                        decreased_started = True
+                        last_number = arr[i]
 
                 elif arr[i] < last_number:
                     last_number = arr[i]
