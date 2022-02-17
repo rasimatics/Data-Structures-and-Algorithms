@@ -11,5 +11,5 @@ class Solution:
         return ans
             
 
-test = Solution()
-print(test.romanToInt("MCMXCIV"))
+test = Solution() 
+print(test.romanToInt("MCMXCIV")) #1994
