@@ -17,6 +17,9 @@ class Solution:
         right = self.climbStairs(n-2)
         return left + right
     
+    # not count print number of ways - all combinations
+    def climbStairs3(self):
+        pass
 
 test = Solution() 
 print(test.climbStairs(4)) # 5
