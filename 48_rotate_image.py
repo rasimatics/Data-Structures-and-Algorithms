@@ -1,5 +1,26 @@
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
+        self.transpose(matrix)
+        self.reverse(matrix)
+        
+        
+    def transpose(self, matrix):
+        for i in range(len(matrix)):
+            for j in range(i, len(matrix[0])):
+                tmp = matrix[i][j]
+                matrix[i][j] = matrix[j][i]
+                matrix[j][i] = tmp
+
+                
+    def reverse(self, matrix):
+        for i in range(len(matrix)):
+            for j in range(len(matrix) // 2):
+                tmp = matrix[i][j] 
+                matrix[i][j]  = matrix[i][len(matrix) - j -1] 
+                matrix[i][len(matrix) - j -1] = tmp
+
+    
+    def rotate2(self, matrix: List[List[int]]) -> None:
         """
         Do not return anything, modify matrix in-place instead.
         """
