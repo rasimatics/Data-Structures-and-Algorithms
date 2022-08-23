@@ -25,9 +25,4 @@ class Solution:
         return _count + self.checkNodes(node.left, _max) + self.checkNodes(node.right, _max)
         
 
-            
-        
-        
-            
-                
-                    
+    
