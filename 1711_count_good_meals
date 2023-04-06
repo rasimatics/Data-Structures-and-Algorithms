@@ -1,0 +1,21 @@
+class Solution:
+    def countPairs(self, deliciousness: List[int]) -> int:
+        mod = 1000000007
+        hashmap = {}
+        res = 0
+
+        for num in deliciousness:
+            power = 1
+            
+            for _ in range(22):
+                if (power - num) in hashmap:
+                    res += hashmap[(power-num)]
+                    res %= mod
+                
+                power *= 2
+
+            hashmap[num] = hashmap.get(num, 0) + 1
+
+        return res
+
+
